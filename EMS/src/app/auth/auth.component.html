@@ -1,0 +1,16 @@
+<div class="heading">
+<label > 
+    <input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+        Access is <span *ngIf="marked">Granted</span><span *ngIf="!marked">Not Granted</span> to add employee
+    
+      <span class="checkmark"></span>
+    </label>
+</div>
+
+<br />
+<div class="button-container">
+  <button (click)="Cancel()" class="goBackButton">Cancel</button>
+  <button [disabled]="!marked" (click)="gotoAddEmp()" class="submitButton">Submit</button>
+</div>
+
+<router-outlet></router-outlet>

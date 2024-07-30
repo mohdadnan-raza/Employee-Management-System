@@ -1,0 +1,44 @@
+<h2 class="heading">
+    Employee Details
+</h2>
+
+<!-- Main -->
+<div class="main">
+    <div class="card">
+        <div>
+            <i class="fa fa-pen fa-xs edit"></i>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>EmpId</td>
+                        <td>:</td>
+                        <td>{{EmployeeData.id}}</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>:</td>
+                        <td>{{EmployeeData.name}}</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>:</td>
+                        <td>{{EmployeeData.location}}</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>{{EmployeeData.email}}</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile</td>
+                        <td>:</td>
+                        <td>{{EmployeeData.mobile}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div>
+    <a routerLink (click)="goBack()" class="goBackButton">Back</a>
+</div>

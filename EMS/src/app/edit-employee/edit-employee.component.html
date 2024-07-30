@@ -1,0 +1,86 @@
+<h2 class="heading">
+  Edit Employee
+</h2>
+
+<div class="main">
+  <div class="card">
+    <i class="fa fa-pen fa-xs edit"></i>
+    <form #addForm="ngForm">
+    <div>
+      <br />
+      <table>
+        <tbody>
+          <tr>
+            <td>EmpId</td>
+            <td>:</td>
+            <td style="padding-left: 40px;"> {{EmployeeData.id}} </td>
+          </tr>
+          <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><input type="text" id="name" name="name" [(ngModel)]="EmployeeData.name" required minlength="3"
+              pattern="[a-zA-Z ]*" #nameInput="ngModel" class="space" />
+            <div *ngIf="nameInput.invalid &&(nameInput.dirty || nameInput.touched)" class="error-message">
+              <div *ngIf="nameInput.errors?.['required']">
+                *Name is required.
+              </div>
+              <div *ngIf="nameInput.errors?.['minlength']">
+                Name should have at least 3 characters.
+              </div>
+              <div *ngIf="nameInput.errors?.['pattern']">
+                Alphabets Only.
+              </div>
+            </div>
+          </td>
+          </tr>
+          <tr>
+            <td>Location</td>
+            <td>:</td>
+            <td><select id="location" name="location" [(ngModel)]="EmployeeData.location" #locationInput="ngModel"
+              required class="space">
+              <option value="" disabled>Select</option>
+              <option *ngFor="let option of empService.LocationList" [value]="option">
+                {{ option }}
+              </option>
+            </select>
+            <div *ngIf="locationInput.invalid && (locationInput.dirty || locationInput.touched)"
+              class="error-message">
+              <div *ngIf="locationInput.errors?.['required']">*Location is required.
+              </div>
+            </div></td>
+          </tr>
+          <tr>
+            <td>Email</td>
+            <td>:</td>
+            <td><input type="email" id="email" name="email" [(ngModel)]="EmployeeData.email" required email
+              #emailInput="ngModel" class="space" />
+            <div *ngIf="emailInput.invalid && (emailInput.dirty || emailInput.touched)" class="error-message">
+              <div *ngIf="emailInput.errors?.['required']">*Email is required.</div>
+              <div *ngIf="emailInput.errors?.['email']">Invalid email format.</div>
+            </div>
+          </td>
+          </tr>
+          <tr>
+            <td>Mobile</td>
+            <td>:</td>
+            <td><input type="number" id="mobile" name="mobile" [(ngModel)]="EmployeeData.mobile" required
+              pattern="^((\\+91-?)|0)?[0-9]{10}$" #mobileInput="ngModel" class="space" />
+            <div *ngIf="mobileInput.invalid && (mobileInput.dirty || mobileInput.touched)" class="error-message">
+              <div *ngIf="mobileInput.errors?.['required']">
+                *Mobile Number should have 10 Numbers.</div>
+              <div *ngIf="mobileInput.errors?.['pattern']">
+                *Mobile Number should have 10 Numbers.
+              </div>
+            </div></td>
+          </tr>
+          <br />
+        </tbody>
+      </table>
+    </div>
+  </form>
+  </div>
+</div>
+<div class="button-container">
+  <button (click)="Cancel()" class="goBackButton">Cancel</button>
+  <button [disabled]="addForm.form.invalid" (click)="updateEmployee(EmployeeData)" class="submitButton">Update</button>
+</div>
