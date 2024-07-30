@@ -1,0 +1,204 @@
+.heading
+{
+    color: #406387;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.tableCss            
+{
+    border: solid 1px #e6e5e5;
+    margin: 0 auto;
+}
+            
+/*for header*/
+.tableCss thead
+{
+    background-color: #396889;
+    color:#fff;
+    padding: 20px;
+    text-align:center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+            
+.tableCss td
+{
+    border: solid 1px #e6e5e5;
+    padding: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CSS */
+.editbutton {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.editbutton:hover,
+.editbutton:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.editbutton:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.editbutton:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+
+/* CSS */
+.deletebutton {
+    background-color: #fa5555;
+    border-radius: 3px;
+    border: 1px solid #fd3535;
+    box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+    box-sizing: border-box;
+    color: #faf6f6;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.15385;
+    margin: 0;
+    outline: none;
+    padding: 8px .4em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+  
+  .deletebutton:hover,
+  .deletebutton:focus {
+    background-color: #ff0c0c;
+    color: #0b0b0b;
+  }
+  
+  .deletebutton:focus {
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.93);
+  }
+  
+  .deletebutton:active {
+    background-color: #f85959;
+    box-shadow: none;
+    color: #fde5e5;
+  }
+  
+  form {
+    width: 400px;
+    margin: 55%;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    padding: 4px 10px;
+    border: #1c87c9;
+  }
+  
+  .search {
+    background-color: #bbdff9;
+
+  }
+  
+  .searchfilter {
+    /* display: flex;
+    justify-content: flex-end; */
+    /* width: 20px; */
+    color: #000000;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* margin-top: 10px;
+    padding-bottom: 10px; */
+  }
+
+  .filters{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 157px;
+    margin-right: 9.8rem;
+    padding-bottom: 10px;
+  }
+
+  .totalfilter{
+    /* padding-bottom: 10px;
+    margin-bottom: 10px; */
+  }
+
+
+  /* CSS */
+.goBackButton {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin-top: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.goBackButton:hover,
+.goBackButton:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.goBackButton:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.goBackButton:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}

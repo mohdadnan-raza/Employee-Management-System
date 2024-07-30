@@ -1,0 +1,40 @@
+<h2 class="heading">
+  Employees List
+</h2>
+
+<div class="filters">
+  <div class="totalfilter">
+    <label> Total Number of Employees: {{empService.employees|namefilter:search | countfilter}} </label>
+  </div>
+  <div class="searchfilter">
+    <label> Filter by: </label>
+    <input type="text" name="text" [(ngModel)]="search" class="search" placeholder="Search here!">
+  </div>
+</div>
+
+<table class="tableCss">
+  <thead>
+    <th>Emp Id</th>
+    <th>Name</th>
+    <th>Location</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Actions</th>
+  </thead>
+  <tr *ngFor='let emp of empService.employees|namefilter:search'>
+    <td><a [routerLink]="['/employee-details', emp.id]">{{emp.id}}</a></td>
+    <!-- <td><a routerLink (click)="getEmpDetails(emp.id)">{{emp.id}}</a></td> -->
+    <td>{{emp.name}}</td>
+    <td>{{emp.location}}</td>
+    <td>{{emp.email}}</td>
+    <td>{{emp.mobile}}</td>
+    <td>
+      <a routerLink (click)="editEmpDetails(emp.id)" class="editbutton">Edit{{emp.id}}</a>
+      <button (click)="deleteEmpDetails(emp.id)" class="deleteButton">Delete{{emp.id}}</button>
+    </td>
+  </tr>
+</table>
+
+<div>
+  <a routerLink (click)="goBack()" class="goBackButton">Back</a>
+</div>
